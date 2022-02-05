@@ -1,0 +1,13 @@
+.hero {
+  animation: hero-animation .5s steps(4) infinite;
+  position: absolute;
+}
+
+@keyframes hero-animation {
+  from {
+    background-position-x: 0;
+  }
+  to {
+    background-position-x: -192px;
+  }
+}
