@@ -1,11 +1,11 @@
 import React from "react";
 import { HEAD_OFFSET, TILE_SIZE } from "../Settings/constants";
 
-import styles from "./Hero.module.css";
+import styles from "./MiniDemon.module.css";
 
-const Hero = () => {
-  const [y, setY] = React.useState(2);
-  const [x, setX] = React.useState(1);
+const MiniDemon = () => {
+  const [y, setY] = React.useState(12);
+  const [x, setX] = React.useState(8);
 
   return (
     <div
@@ -15,12 +15,12 @@ const Hero = () => {
         bottom: TILE_SIZE * y,
         left: TILE_SIZE * x,
         backgroundRepeat: "no-repeat",
-        backgroundImage: "url(./assets/HERO.png)",
+        backgroundImage: "url(./assets/MINI-DEMON.png)",
         backgroundPosition: `0 -${TILE_SIZE - HEAD_OFFSET}px`,
       }}
-      className={styles.hero}
+      className={styles.miniDemon}
     ></div>
   );
 };
 
-export default Hero;
+export default MiniDemon;

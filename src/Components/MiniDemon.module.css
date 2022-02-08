@@ -1,5 +1,5 @@
-.hero {
-  animation: basic-animation 0.5s steps(4) infinite;
+.miniDemon {
+  animation: basic-animation .5s steps(4) infinite;
   position: absolute;
 }
 

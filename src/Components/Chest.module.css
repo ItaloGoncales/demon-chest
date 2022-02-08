@@ -1,5 +1,5 @@
-.hero {
-  animation: basic-animation 0.5s steps(4) infinite;
+.chest {
+  animation: basic-animation .5s steps(3) infinite;
   position: absolute;
 }
 
@@ -8,6 +8,6 @@
     background-position-x: 0;
   }
   to {
-    background-position-x: -192px;
+    background-position-x: -144px;
   }
 }
