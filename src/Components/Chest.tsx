@@ -4,16 +4,18 @@ import { TILE_SIZE } from "../Settings/constants";
 import styles from "./Chest.module.css";
 
 const Chest = () => {
-  const [y, setY] = React.useState(4);
-  const [x, setX] = React.useState(16);
+  const [position, setPosition] = React.useState({
+    x: 16,
+    y: 4,
+  });
 
   return (
     <div
       style={{
         width: TILE_SIZE,
-        height: 100,
-        bottom: TILE_SIZE * y,
-        left: TILE_SIZE * x,
+        height: TILE_SIZE,
+        bottom: TILE_SIZE * position.y,
+        left: TILE_SIZE * position.x,
         backgroundRepeat: "no-repeat",
         backgroundImage: "url(./assets/CHEST.png)",
       }}
