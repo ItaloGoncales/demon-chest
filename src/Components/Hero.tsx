@@ -10,6 +10,7 @@ const Hero = () => {
     x: 1,
     y: 2,
   });
+  const [direction, setDirection] = React.useState("right");
 
   const move = (x: number, y: number) => {
     if (x < 1) x = 1;
@@ -30,11 +31,13 @@ const Hero = () => {
       case "ARROWLEFT":
       case "A": {
         move(position.x - 1, position.y);
+        setDirection("left");
         break;
       }
       case "ARROWRIGHT":
       case "D": {
         move(position.x + 1, position.y);
+        setDirection("right");
         break;
       }
       case "ARROWUP":
@@ -60,6 +63,7 @@ const Hero = () => {
         backgroundRepeat: "no-repeat",
         backgroundImage: "url(./assets/HERO.png)",
         backgroundPosition: `0 -${TILE_SIZE - HEAD_OFFSET}px`,
+        transform: `scaleX(${direction === "right" ? 1 : -1})`,
       }}
       className={styles.hero}
     ></div>
