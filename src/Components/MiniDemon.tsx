@@ -1,10 +1,11 @@
 import React from "react";
+import useEnemyMovement from "../Hooks/useEnemyMovement";
 import { HEAD_OFFSET, TILE_SIZE } from "../Settings/constants";
 
 import styles from "./MiniDemon.module.css";
 
 const MiniDemon = () => {
-  const [position, setPosition] = React.useState({
+  const { position, direction } = useEnemyMovement({
     x: 8,
     y: 12,
   });
@@ -19,6 +20,7 @@ const MiniDemon = () => {
         backgroundRepeat: "no-repeat",
         backgroundImage: "url(./assets/MINI-DEMON.png)",
         backgroundPosition: `0 -${TILE_SIZE - HEAD_OFFSET}px`,
+        transform: `scaleX(${direction === "right" ? 1 : -1})`,
       }}
       className={styles.miniDemon}
     ></div>

@@ -1,10 +1,11 @@
 import React from "react";
+import useEnemyMovement from "../Hooks/useEnemyMovement";
 import { TILE_SIZE } from "../Settings/constants";
 
 import styles from "./Chest.module.css";
 
 const Chest = () => {
-  const [position, setPosition] = React.useState({
+  const { position, direction } = useEnemyMovement({
     x: 16,
     y: 4,
   });
@@ -18,6 +19,7 @@ const Chest = () => {
         left: TILE_SIZE * position.x,
         backgroundRepeat: "no-repeat",
         backgroundImage: "url(./assets/CHEST.png)",
+        transform: `scaleX(${direction === "right" ? 1 : -1})`,
       }}
       className={styles.chest}
     ></div>

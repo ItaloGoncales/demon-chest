@@ -1,13 +1,10 @@
 import React from "react";
-import { TILE_SIZE } from "../Settings/constants";
+import { Position, TILE_SIZE } from "../Settings/constants";
 
 import styles from "./Trap.module.css";
 
-const Trap = () => {
-  const [position, setPosition] = React.useState({
-    x: 8,
-    y: 3,
-  });
+const Trap = ({ initialPosition }: { initialPosition: Position }) => {
+  const [position] = React.useState(initialPosition);
 
   return (
     <div
