@@ -20,6 +20,7 @@ const Chest = () => {
         backgroundRepeat: "no-repeat",
         backgroundImage: "url(./assets/CHEST.png)",
         transform: `scaleX(${direction === "right" ? 1 : -1})`,
+        zIndex: 1,
       }}
       className={styles.chest}
     ></div>

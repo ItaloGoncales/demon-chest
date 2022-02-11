@@ -20,6 +20,7 @@ const Demon = () => {
         backgroundRepeat: "no-repeat",
         backgroundImage: "url(./assets/Demon.png)",
         transform: `scaleX(${direction === "right" ? 1 : -1})`,
+        zIndex: 1,
       }}
       className={styles.demon}
     ></div>

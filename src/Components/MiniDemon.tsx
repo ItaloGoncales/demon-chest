@@ -21,6 +21,7 @@ const MiniDemon = () => {
         backgroundImage: "url(./assets/MINI-DEMON.png)",
         backgroundPosition: `0 -${TILE_SIZE - HEAD_OFFSET}px`,
         transform: `scaleX(${direction === "right" ? 1 : -1})`,
+        zIndex: 1,
       }}
       className={styles.miniDemon}
     ></div>
