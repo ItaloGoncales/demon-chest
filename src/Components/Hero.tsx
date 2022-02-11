@@ -18,7 +18,7 @@ const Hero = () => {
         backgroundImage: "url(./assets/HERO.png)",
         backgroundPosition: `0 -${TILE_SIZE - HEAD_OFFSET}px`,
         transform: `scaleX(${direction === "right" ? 1 : -1})`,
-        zIndex: 1,
+        zIndex: 2,
       }}
       className={styles.hero}
     ></div>
